@@ -44,6 +44,10 @@ async def create_user(user_data: UserCreate):
         "username": username,
     }
 
+
+@app.get("/")
+async def get_users():
+    return {"users": "welcom"}
 @app.get("/get_users/")
 async def get_users():
     # Read users from CSV
